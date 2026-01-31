@@ -20,6 +20,10 @@ const io = new Server(server, {
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.get('/', (req, res) => {
+    res.send('Smart Parking Backend is running 🚗');
+});
+
 
 // Database Connection
 let MongoMemoryServer;
